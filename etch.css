@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro&display=swap');
+
+
+html,body,canvas{
+    height: 100%;
+    color: darkgrey;
+ 
+}
+
+html{
+    overflow: hidden;
+    background: burlywood;
+
+}
+
+#glow canvas{
+    position:absolute;
+    width: 100%;
+}
+.sectionOne{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    margin-top: 60px;
+    
+}
+
+
+ .sectionOne h1{
+    font-family: 'Exo';
+    transform: skew(-15deg);
+    letter-spacing: 0.03em;
+    bottom: 524px;
+    left:50%;
+    font-size: 33px;
+    margin-top:12px;
+   
+
+}
+
+
+.gameContainer{
+    width :600px;
+    height: 600px;
+    display: grid;
+    z-index: 100;
+    margin-top: 20px;
+    box-shadow: 13px;
+ 
+}
+
+.buttond{
+    
+    padding: 19px;
+    box-shadow: inset 400px 9 9 rgb(148, 112, 112);
+
+   
+  
+}
+
+.btn{
+    width: 100px;
+    height: 70px;
+    padding: 22px;
+    display: inline-block;
+    border: rgb(141, 119, 141) 2px solid;
+    margin: 21px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: rgba(237, 234, 245, 0.89);
+    background-color: rgb(100, 62, 26);
+    transition: ease-in 0.3s;
+    box-shadow: inset 12px 9 9 rgb(148, 112, 112);
+    box-shadow: 100px gray;
+}
+
+.btn:hover{
+    letter-spacing: 0.25em;
+    box-shadow: inset 50px 0 0 rgb(63, 65, 45);
+    
+    
+}
+
+@keyframes animate{
+    0%{
+        transform: translateY(0) rotate(0) scale(0);
+        opacity:0;
+    }
+    30%{
+        opacity: 1;
+        filter: hue-rotate(100deg);
+    }
+
+    80%{
+        opacity: 1;
+    }
+
+    100%{
+        transform: translateY(-400) rotate(360) scale(1);
+         filter: hue-rotate(100deg);
+    }
+}
